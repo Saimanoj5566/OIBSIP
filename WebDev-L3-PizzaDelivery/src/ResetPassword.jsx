@@ -44,7 +44,7 @@ function ResetPassword() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/auth/reset-password",
+        "https://pizzahub-1-dxm2.onrender.com/api/auth/reset-password",
         {
           method: "POST",
           headers: {

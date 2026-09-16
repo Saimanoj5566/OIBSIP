@@ -32,7 +32,7 @@ function TrackOrder() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/orders/${enteredOrderId}`
+        `https://pizzahub-1-dxm2.onrender.com/api/orders/${enteredOrderId}`
       );
 
       const data = await response.json();

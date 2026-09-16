@@ -24,7 +24,7 @@ const AdminInventory = () => {
       }
 
       const response = await fetch(
-        "http://localhost:5000/api/inventory",
+        "https://pizzahub-1-dxm2.onrender.com/api/inventory",
         {
           method: "GET",
           headers: {
@@ -85,7 +85,7 @@ const AdminInventory = () => {
       }
 
       const response = await fetch(
-        `http://localhost:5000/api/inventory/${item._id}`,
+        `https://pizzahub-1-dxm2.onrender.com/api/inventory/${item._id}`,
         {
           method: "PUT",
           headers: {

@@ -28,7 +28,7 @@ function AdminOrders() {
     }
 
     const response = await fetch(
-      "http://localhost:5000/api/orders",
+      "https://pizzahub-1-dxm2.onrender.com/api/orders",
       {
         method: "GET",
         headers: {
@@ -78,7 +78,7 @@ function AdminOrders() {
     }
 
     const response = await fetch(
-      `http://localhost:5000/api/orders/${orderId}`,
+      `https://pizzahub-1-dxm2.onrender.com/api/orders/${orderId}`,
       {
         method: "PUT",
         headers: {

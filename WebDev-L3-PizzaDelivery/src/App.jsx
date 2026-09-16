@@ -84,7 +84,7 @@ const handleLogout = () => {
   // =========================================
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/pizzas")
+    fetch("https://pizzahub-1-dxm2.onrender.com/api/pizzas")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch pizzas");
@@ -266,7 +266,7 @@ const handleLogout = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/orders",
+       "https://pizzahub-1-dxm2.onrender.com/api/orders",
         {
           method: "POST",
 

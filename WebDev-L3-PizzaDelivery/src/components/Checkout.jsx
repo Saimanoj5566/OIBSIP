@@ -117,7 +117,7 @@ function Checkout({ cart, onBackToCart, onPlaceOrder }) {
       console.log("Payment amount:", total);
 
       const response = await fetch(
-        "http://localhost:5000/api/payment/create-order",
+        "https://pizzahub-1-dxm2.onrender.com/api/payment/create-order",
         {
           method: "POST",
 
@@ -299,7 +299,7 @@ function Checkout({ cart, onBackToCart, onPlaceOrder }) {
             );
 
             const verifyResponse = await fetch(
-              "http://localhost:5000/api/payment/verify",
+              "https://pizzahub-1-dxm2.onrender.com/api/payment/verify",
               {
                 method: "POST",
 

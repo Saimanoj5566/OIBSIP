@@ -1,4 +1,4 @@
-// ==========================================
+﻿// ==========================================
 // PIZZAHUB BACKEND SERVER
 // ==========================================
 
@@ -495,7 +495,7 @@ const checkLowStockAndSendEmail = async () => {
     await emailTransporter.sendMail({
       from: `"PizzaHub" <${process.env.EMAIL_FROM}>`,
       to: process.env.EMAIL_FROM,
-      subject: "⚠️ PizzaHub Low Stock Alert",
+      subject: "âš ï¸ PizzaHub Low Stock Alert",
       html: `
         <div style="
           font-family:Arial,sans-serif;
@@ -508,7 +508,7 @@ const checkLowStockAndSendEmail = async () => {
         ">
 
           <h1 style="color:#d90429;">
-            🍕 PizzaHub Inventory Alert
+            ðŸ• PizzaHub Inventory Alert
           </h1>
 
           <p style="font-size:16px;color:#444;">
@@ -800,7 +800,7 @@ const defaultInventory = [
     unit: "servings",
   },
   {
-    name: "Jalapeño",
+    name: "JalapeÃ±o",
     category: "Vegetable",
     stock: 100,
     threshold: 20,
@@ -947,15 +947,14 @@ app.post("/api/auth/register", async (req, res) => {
     });
 
     // Create verification link
-    const verificationLink =
-      `http://localhost:5000/api/auth/verify-email?token=${verificationToken}`;
+    const backendUrl = (`r`n  process.env.BACKEND_URL ||`r`n  "http://localhost:5000"`r`n).replace(/\/$/, "");`r`n`r`nconst verificationLink =`r`n  `${backendUrl}/api/auth/verify-email?token=${verificationToken}`;
 
     // Send verification email
     try {
       await emailTransporter.sendMail({
         from: `"PizzaHub" <${process.env.EMAIL_FROM}>`,
         to: cleanEmail,
-        subject: "Verify your PizzaHub account 🍕",
+        subject: "Verify your PizzaHub account ðŸ•",
 
         html: `
           <div style="
@@ -972,7 +971,7 @@ app.post("/api/auth/register", async (req, res) => {
               color: #111827;
               margin-bottom: 10px;
             ">
-              Welcome to PizzaHub! 🍕
+              Welcome to PizzaHub! ðŸ•
             </h1>
 
             <p style="
@@ -1111,7 +1110,7 @@ app.get("/api/auth/verify-email", async (req, res) => {
           text-align: center;
           margin-top: 80px;
         ">
-          <h1>❌ Verification Failed</h1>
+          <h1>âŒ Verification Failed</h1>
           <p>This verification link is invalid or has expired.</p>
         </div>
       `);
@@ -1135,7 +1134,7 @@ app.get("/api/auth/verify-email", async (req, res) => {
         margin-top: 80px;
       ">
         <h1 style="color: #16a34a;">
-          ✅ Email Verified Successfully!
+          âœ… Email Verified Successfully!
         </h1>
 
         <p style="
@@ -1218,7 +1217,7 @@ const resetLink =
       await emailTransporter.sendMail({
         from: `"PizzaHub" <${process.env.EMAIL_FROM}>`,
         to: cleanEmail,
-        subject: "Reset your PizzaHub password 🔐",
+        subject: "Reset your PizzaHub password ðŸ”",
 
         html: `
           <div style="
@@ -1232,7 +1231,7 @@ const resetLink =
           ">
 
             <h1 style="color: #111827;">
-              Password Reset 🔐
+              Password Reset ðŸ”
             </h1>
 
             <p style="

@@ -33,12 +33,12 @@ function Auth({ onLoginSuccess }) {
       let endpoint = "";
 
       if (mode === "register") {
-        endpoint = "http://localhost:5000/api/auth/register";
+        endpoint = "https://pizzahub-1-dxm2.onrender.com/api/auth/register";
       } else if (mode === "login") {
-        endpoint = "http://localhost:5000/api/auth/login";
+        endpoint = "https://pizzahub-1-dxm2.onrender.com/api/auth/login";
       } else {
         endpoint =
-          "http://localhost:5000/api/auth/forgot-password";
+          "https://pizzahub-1-dxm2.onrender.com/api/auth/forgot-password";
       }
 
       const body =

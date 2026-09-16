@@ -24,7 +24,7 @@ function AdminLogin({ onAdminLoginSuccess }) {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/auth/login",
+        "https://pizzahub-1-dxm2.onrender.com/api/auth/login",
         {
           method: "POST",
           headers: {
@@ -103,7 +103,7 @@ function AdminLogin({ onAdminLoginSuccess }) {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/auth/forgot-password",
+        "https://pizzahub-1-dxm2.onrender.com/api/auth/forgot-password",
         {
           method: "POST",
           headers: {
